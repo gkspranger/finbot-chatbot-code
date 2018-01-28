@@ -1,0 +1,17 @@
+>Below are known contacts that match the value '{{contact}}'
+>
+{{#each contacts}}
+>*Name*:  {{firstName}}{{#if middleName}} {{middleName}}{{/if}} {{lastName}}
+{{#if ../call}}
+>*Phone(s)*:
+{{#each phones}}
+>    {{#if label}}*({{label}})* {{/if}}*{{type}}*: {{number}}{{#if extension}} Ext. {{extension}}{{/if}}{{#if preferred}} *(preferred)*{{/if}}
+{{/each}}
+{{else}}
+>*Email(s)*:
+{{#each emails}}
+>    {{#if label}}*({{label}})* {{/if}}*{{type}}*: {{address}}{{#if preferred}} *(preferred)*{{/if}}
+{{/each}}
+{{/if}}
+>
+{{/each}}

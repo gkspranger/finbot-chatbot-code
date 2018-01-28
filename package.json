@@ -1,0 +1,31 @@
+{
+  "name": "finbot-node-code",
+  "version": "1.0.0",
+  "private": true,
+  "author": "gkspranger",
+  "keywords": [
+    "hubot",
+    "finbot",
+    "bot"
+  ],
+  "description": "FinBot Node code.",
+  "dependencies": {
+	"coffee-script": ">= 1.12.x",
+    "hubot": ">= 2.19.x",
+    "hubot-redis-brain": ">= 0.0.3",
+    "hubot-slack": ">= 4.3.x",
+    "hubot-conversation": ">= 1.1.x",
+    "winston": ">= 2.3.x",
+    "promise": ">= 7.1.x",
+    "moment": ">= 2.18.x",
+    "numeral": ">= 2.0.x",
+    "handlebars": ">= 4.0.x",
+    "striptags": ">= 3.0.x",
+    "he": ">= 1.1.x",
+    "lodash": ">= 4.17.x"
+  },
+  "engines": {
+    "node": ">= 6.10.x",
+    "npm": ">= 3.10.x"
+  }
+}

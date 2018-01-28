@@ -1,0 +1,11 @@
+{{#each activities}}
+*Subject*: {{subject}}
+*Type*: {{type}}
+*Category*: {{category}}
+*Note*: {{note}}
+*Start Date & Time*: {{start}}
+*Assigned To*: {{addedByName}}
+
+{{else}}
+Sorry, I could not locate any activities for this contact.
+{{/each}}

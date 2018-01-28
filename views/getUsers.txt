@@ -1,0 +1,5 @@
+{{#each users}}
+{{lastName}}, {{firstName}}
+{{else}}
+No users were found ..
+{{/each}}

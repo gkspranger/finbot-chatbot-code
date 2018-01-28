@@ -1,0 +1,6 @@
+All Contact Phones:
+{{#each phones}}
+    {{#if label}}*({{label}})* {{/if}}*{{type}}*: {{number}}{{#if extension}} Ext. {{extension}}{{/if}}{{#if preferred}} *(preferred)*{{/if}}
+{{else}}
+    Sorry, I could not find any phone numbers for FIRST NAME LAST NAME.
+{{/each}}

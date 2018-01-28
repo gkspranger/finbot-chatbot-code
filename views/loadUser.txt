@@ -1,0 +1,12 @@
+{{#if empty}}
+no users found
+{{else if single}}
+{{#each users}}
+The user {{firstName}} {{lastName}} (User ID: {{id}}) has been loaded into the brain ..
+{{/each}}
+{{else if many}}
+More than one user matches your query .. Please try again using a 'User ID' listed below ..
+{{#each users}}
+{{lastName}}, {{firstName}} (User ID: {{id}})
+{{/each}}
+{{/if}}

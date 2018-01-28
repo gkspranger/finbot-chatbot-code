@@ -1,0 +1,9 @@
+*Notes*:
+{{#each notes}}
+*Category*: {{category}}
+*Note*:
+    {{note}}
+*Added by*: {{#if addedBy}}{{addedBy}}{{else}}{{name}}{{/if}} on {{added}}
+{{else}}
+        Sorry, I could not find any notes for this contact.
+{{/each}}

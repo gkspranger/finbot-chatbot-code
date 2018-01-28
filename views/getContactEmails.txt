@@ -1,0 +1,6 @@
+Contact's emails:
+{{#each emails}}
+    {{address}}{{#if preferred}} *(preferred)*{{/if}}
+{{else}}
+    There are no emails available for this individual
+{{/each}}

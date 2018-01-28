@@ -1,0 +1,11 @@
+{{#each opportunities}}
+*Name*: {{name}}
+*Description*: {{{description}}}
+*Amount*: {{amount}}
+*Next Step*: {{next}}
+*Close Date*: {{close}}
+*Assigned To*: {{assignedUser.short}}
+
+{{else}}
+no open opportunities were found .. get off your ass
+{{/each}}

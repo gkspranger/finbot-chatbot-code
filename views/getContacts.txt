@@ -1,0 +1,22 @@
+{{!--
+# expected JSON object
+{
+    contacts: [
+        {
+            age: ..,
+            id: ..,
+            firstName: ..,
+            gender: ..,
+            lastName: ..,
+            middleName: ..,
+            taxId: ..
+        },
+        ..
+    ]
+}
+--}}
+{{#each contacts}}
+{{lastName}}, {{firstName}}{{#if middleName}} {{middleName}}{{/if}} (Age: {{age}}, Gender: {{gender}})
+{{else}}
+No contacts were found ..
+{{/each}}

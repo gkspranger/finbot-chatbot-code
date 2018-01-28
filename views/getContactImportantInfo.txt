@@ -1,0 +1,6 @@
+*Important*:
+{{#each important}}
+        {{this}}
+{{else}}
+        No important information was found for FIRST NAME LAST NAME.
+{{/each}}

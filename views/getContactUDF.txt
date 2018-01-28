@@ -1,0 +1,6 @@
+*User Defined Fields*:
+{{#each udfs}}
+        *{{name}}*: {{value}}
+{{else}}
+        No user defined fields have been created for this user.. Why the fuck not ??
+{{/each}}

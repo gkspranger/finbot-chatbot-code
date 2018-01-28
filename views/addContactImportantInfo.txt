@@ -1,0 +1,15 @@
+{
+    "attachments": [
+        {
+            "fallback": "Add important information to Contact",
+            "color": "{{slackColor}}",
+            "footer_icon": "{{footerIcon}}",
+            "footer": "{{footer}}",
+            {{#if success}}
+            "text": "\"{{{escape info}}}\" has been added to important information for {{escape contact.firstName}} {{escape contact.lastName}}"
+            {{else}}
+            "text": "Sorry, there was an issue updating this FIRST NAME LAST NAME'S Important Information."
+            {{/if}}
+        }
+    ]
+}

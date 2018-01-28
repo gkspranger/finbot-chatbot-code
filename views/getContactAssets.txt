@@ -1,0 +1,6 @@
+Contact's Assets and Liabilities:
+{{#each assetsLiabilities}}
+*Name*: {{name}}
+    *Type*: {{type}}
+    *Balance*: {{balance}}
+{{/each}}

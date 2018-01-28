@@ -1,0 +1,16 @@
+{{!--
+# expected JSON object
+{
+    firstName: ..,
+    lastName: ..,
+    short: ..,
+    id: ..
+}
+--}}
+{{#if id}}
+Your loaded user is:
+        *Name*: {{firstName}} {{lastName}}
+        *ID*: {{id}}
+{{else}}
+No user has been loaded into your brain
+{{/if}}

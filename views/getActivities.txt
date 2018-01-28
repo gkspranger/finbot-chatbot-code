@@ -1,0 +1,9 @@
+{{#each activities}}
+*({{start}}) Subject*: {{subject}}
+    *Contact*: {{contact}}
+    *Category*: {{category}}
+    *Type*: {{type}}
+    *Location*: {{location}}
+{{else}}
+Sorry, I could not find any activities for this contact.
+{{/each}}

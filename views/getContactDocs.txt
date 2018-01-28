@@ -1,0 +1,16 @@
+{{#if error}}
+There was an error on the server
+{{else}}
+*Name*:  {{contact.firstName}}{{#if contact.middleName}} {{contact.middleName}}{{/if}} {{contact.lastName}}
+*Documents*:
+{{#each documents}}
+    *File Name*: <{{downloadUrl}}|{{name}}{{extension}}>
+    *Description*: {{description}}
+    *Date Added*: {{added}}
+    *Category*: {{category}}
+    *Added By*: {{user.firstName}} {{user.lastName}}
+
+{{else}}
+    No documents were found
+{{/each}}
+{{/if}}

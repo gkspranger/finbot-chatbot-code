@@ -1,0 +1,6 @@
+Here are the addresses for FIRST NAME LAST NAME:
+{{#each addresses}}
+    {{#if label}}*({{label}})* {{/if}}{{#if type}}*{{type}}*: {{/if}}{{address1}}{{#if address2}} {{address2}}{{/if}}  {{city}}, {{state}}  {{zipCode}}{{#if preferred}} *(preferred)*{{/if}}
+{{else}}
+    Sorry, I could not locate any addresses for this contact.
+{{/each}}

@@ -1,0 +1,11 @@
+{{#if error}}
+There was an error on the server
+{{else}}
+*Name*:  {{contact.firstName}}{{#if contact.middleName}} {{contact.middleName}}{{/if}} {{contact.lastName}}
+*Tag Groups*:
+{{#each tagGroups}}
+    *Group*: {{name}}
+{{else}}
+    No tag groups found
+{{/each}}
+{{/if}}

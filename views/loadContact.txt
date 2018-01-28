@@ -1,0 +1,12 @@
+{{#if empty}}
+No contact matches your query .. Please try again using an expanded query ..
+{{else if single}}
+{{#each contacts}}
+The contact {{firstName}}{{#if middleName}} {{middleName}}{{/if}} {{lastName}} (Client ID: {{id}}, Tax ID: {{taxId}}) has been loaded into the brain ..
+{{/each}}
+{{else if many}}
+More than one contact matches your query .. Please try again using a 'Client ID' listed below ..
+{{#each contacts}}
+{{lastName}}, {{firstName}}{{#if middleName}} {{middleName}}{{/if}} (Client ID: {{id}}, Tax ID: {{taxId}})
+{{/each}}
+{{/if}}

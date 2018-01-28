@@ -1,0 +1,16 @@
+{
+    "attachments": [
+        {
+            "fallback": "Retrieves a list of all commands",
+            "color": "{{slackColor}}",
+            "footer_icon": "{{footerIcon}}",
+            "footer": "{{footer}}",
+            {{#if commands.length}}
+            "pretext": "Here is a list of available commands:",
+            "text": "{{{ listToJSON commands }}}"
+            {{else}}
+            "text": "There were no commands matching \"{{{ escape query}}}\""
+            {{/if}}
+        }
+    ]
+}

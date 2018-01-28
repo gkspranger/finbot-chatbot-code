@@ -1,0 +1,70 @@
+{
+    "attachments": [
+        {
+            "fallback": "Retrieves a list of all commands",
+            "color": "{{slackColor}}",
+            "footer_icon": "{{footerIcon}}",
+            {{#if empty}}
+            "text": "No one is in the brain, please load a contact"
+            {{else}}
+            "pretext": "Here are the contact details for {{firstName}} {{lastName}}:",
+            "fields": [
+                {
+                    "title": "Name",
+                    "value": "{{firstName}}{{#if middleName}} {{middleName}}{{/if}} {{lastName}}",
+                    "short": true
+                },
+                {
+                    "title": "Tax ID",
+                    "value": "{{taxId}}",
+                    "short": true
+                },
+                {
+                    "title": "Age",
+                    "value": "{{age}}",
+                    "short": true
+                },
+                {
+                    "title": "Status",
+                    "value": "{{status}}",
+                    "short": true
+                },
+                {
+                    "title": "Category",
+                    "value": "{{category}}",
+                    "short": true
+                },
+                {{#if sa.name}}
+                {
+                    "title": "Servicing Advisor",
+                    "value": "{{sa.name}}",
+                    "short": true
+                },
+                {{/if}}
+                {{#each phones}}
+                {
+                    "title": "{{#if label}}{{label}} {{/if}}{{type}}",
+                    "value": "{{number}}{{#if extension}} Ext. {{extension}}{{/if}}{{#if preferred}} *(preferred)*{{/if}}",
+                    "short": true
+                },
+                {{/each}}
+                {{#each emails}}
+                {
+                    "title": "{{#if label}}{{label}} {{/if}}{{type}}",
+                    "value": "{{address}}{{#if preferred}} *(preferred)*{{/if}}",
+                    "short": true
+                },
+                {{/each}}
+                {{#each addresses}}
+                {
+                    "title": "{{#if label}}({{label}}) {{/if}}{{#if type}}{{type}}:{{/if}}",
+                    "value": "{{address1}}\n{{#if address2}}{{address2}}\n{{/if}}{{city}}, {{state}}  {{zipCode}}{{#if preferred}} *(preferred)*{{/if}}",
+                    "short": true
+                }{{#unless @last}},{{/unless}}
+                {{/each}}
+            ],
+            {{/if}}
+            "footer": "{{footer}}"
+        }
+    ]
+}

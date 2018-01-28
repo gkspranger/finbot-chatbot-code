@@ -1,0 +1,26 @@
+{{#if empty}}
+No one is in the brain .. do something about it
+{{else}}
+*Date Added*:  {{profile.added}}
+*Retirement*:  {{profile.retirement}}
+*Occupation*:  {{profile.occupation}}
+{{# if important.important}}
+*Important*:
+{{#each important.important}}
+	{{this}}
+{{else}}
+{{/each}}
+{{/if}}
+{{#unless profile.doctor.empty}}
+*Doctor*: {{profile.doctor.name}}
+{{/unless}}
+{{#unless profile.attorney.empty}}
+*Attorney*: {{profile.attorney.name}}
+{{/unless}}
+{{#unless profile.cpa.empty}}
+*CPA*: {{profile.cpa.name}}
+{{/unless}}
+{{#unless profile.agent.empty}}
+*Agent*: {{profile.agent.name}}
+{{/unless}}
+{{/if}}
